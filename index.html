@@ -72,8 +72,12 @@ function checkSlide(e) {
     sliderImages.forEach(slideImage => {
         // decide whether on page or not
         // gives us how far we are from the top as well as the side
+        // halfway through the image
         const slideInAt = (window.scrollY + window.innerHeight) - slideImage.height / 2;
         // console.log(slideInAt);
+        // offsetTop - the top of this image is how far from the top of the window - pixel level
+        // bottom of the image
+        const imageBottom = sliderImage.offsetTop + sliderImage.height;
 
     });
 };
