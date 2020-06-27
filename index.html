@@ -65,11 +65,19 @@
 const sliderImages = document.querySelectorAll('.slide-in');
 
 function checkSlide(e) {
-    console.log(e)
-    console.count(e)
+    // shows how far you've scrolled down, from the TOP
+    console.log(window.scrollY);
+    // loop over every image
+    // show where each image needs to be shown
+    sliderImages.forEach(sliderImage = > {
+        // decide whether on page or not
+        // gives us how far we are from the top as well as the side
+        const slideInAt = (window.scrollY + window.innerHeight);
+    });
 };
 
 window.addEventListener('scroll', debouncce(checkSlide));
+
 
   </script>
 
