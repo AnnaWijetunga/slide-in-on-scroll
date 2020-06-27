@@ -43,6 +43,9 @@
   </div>
 
   <script>
+    // only run this function at most, how ever many seconds
+    // pass it a function
+    // run debounce, and run checkSlide every so often vs ALL the time
     function debounce(func, wait = 20, immediate = true) {
       var timeout;
       return function() {
@@ -66,7 +69,7 @@ function checkSlide(e) {
     console.count(e)
 };
 
-window.addEventListener('scroll', checkSlide);
+window.addEventListener('scroll', debouncce(checkSlide));
 
   </script>
 
