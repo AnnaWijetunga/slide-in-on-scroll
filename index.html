@@ -78,7 +78,10 @@ function checkSlide(e) {
         // offsetTop - the top of this image is how far from the top of the window - pixel level
         // bottom of the image
         const imageBottom = sliderImage.offsetTop + sliderImage.height;
-
+        // slide in value is greater than top
+        const isHalfShown = slideInAt > sliderImage.offsetTop;
+        // not scrolled all the way past the image
+        const isNotScrolledPast = window.scrollY < imageBottom; 
     });
 };
 
