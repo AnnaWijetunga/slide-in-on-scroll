@@ -69,10 +69,12 @@ function checkSlide(e) {
     console.log(window.scrollY);
     // loop over every image
     // show where each image needs to be shown
-    sliderImages.forEach(sliderImage = > {
+    sliderImages.forEach(slideImage => {
         // decide whether on page or not
         // gives us how far we are from the top as well as the side
-        const slideInAt = (window.scrollY + window.innerHeight);
+        const slideInAt = (window.scrollY + window.innerHeight) - slideImage.height / 2;
+        // console.log(slideInAt);
+
     });
 };
 
